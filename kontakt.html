@@ -1,0 +1,60 @@
+<main class="container" style="padding: 80px 20px;">
+    <h1 style="text-align: center; color: #002b7f; margin-bottom: 40px; font-family: sans-serif;">Kontaktieren Sie uns</h1>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+        
+        <div style="background: #f4f7f6; padding: 35px; border-radius: 15px; border-left: 8px solid #002b7f; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <h3 style="color: #002b7f; margin-bottom: 25px; font-size: 1.5rem;"><i class="fas fa-address-book"></i> Direkter Kontakt</h3>
+            
+            <div style="margin-bottom: 25px;">
+                <p style="margin-bottom: 10px;"><strong><i class="fas fa-envelope"></i> LYAN Reinigung:</strong><br>
+                <a href="mailto:lyangassa@gmail.com" style="color: #cc0000; text-decoration: none; font-weight: 500;">lyangassa@gmail.com</a></p>
+                
+                <p style="margin-bottom: 10px;"><strong><i class="fas fa-envelope-open-text"></i> Guardian Service:</strong><br>
+                <a href="mailto:realguardianship@proton.me" style="color: #cc0000; text-decoration: none; font-weight: 500;">realguardianship@proton.me</a></p>
+            </div>
+
+            <hr style="margin: 25px 0; border: 0; border-top: 1px solid #ddd;">
+
+            <div style="margin-bottom: 25px;">
+                <p style="margin-bottom: 15px;"><strong><i class="fas fa-phone-alt"></i> Deutschland (Mobil):</strong><br>
+                <a href="tel:+4915510152163" style="text-decoration: none; color: #333; font-size: 1.2rem; font-weight: bold;">+49 155 1015 2163</a></p>
+                
+                <p style="margin-bottom: 15px;"><strong><i class="fas fa-phone-square"></i> USA Office:</strong><br>
+                <a href="tel:+14255248504" style="text-decoration: none; color: #333; font-size: 1.1rem;">+1 425 524 8504</a></p>
+            </div>
+
+            <div style="background: #25D366; padding: 15px; border-radius: 10px; text-align: center; margin-top: 20px;">
+                <a href="https://wa.me/4915510152163" target="_blank" style="color: white; text-decoration: none; font-weight: bold; display: block; font-size: 1.1rem;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Nachricht senden
+                </a>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 10px;">
+            <h3 style="margin-bottom: 20px; color: #333;">Senden Sie uns eine Nachricht</h3>
+            <form name="contacto-lyan" method="POST" data-netlify="true" action="/index.html" style="display: flex; flex-direction: column; gap: 20px;">
+                <input type="hidden" name="form-name" value="contacto-lyan" />
+                
+                <div>
+                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Name oder Firma *</label>
+                    <input type="text" name="nombre" placeholder="Ihr Name" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;">
+                </div>
+
+                <div>
+                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">E-Mail-Adresse *</label>
+                    <input type="email" name="email" placeholder="ihre@email.de" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;">
+                </div>
+
+                <div>
+                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Was benötigen Sie? *</label>
+                    <textarea name="mensaje" rows="6" placeholder="z.B. Treppenhausreinigung, Wohnung streichen..." required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                
+                <button type="submit" style="background: #002b7f; color: white; padding: 18px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    Unverbindliche Anfrage senden
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
