@@ -1,0 +1,123 @@
+html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LYAN Reinigung & Maler - US-Qualitätsstandard in Duisburg & Rheinhausen. Profi-Reinigung und Malerarbeiten.">
+    <title>LYAN Reinigung & Maler | Adriana Sandu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shield-alt" aria-hidden="true"></i> LYAN
+            </a>
+            <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Startseite</a></li>
+                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="preise.html">Preise</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <header style="background: linear-gradient(rgba(0,43,127,0.85), rgba(0,43,127,0.85)), url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; padding: 120px 0; color: white; text-align: center;">
+            <div class="container">
+                <h1 style="color: white;">US-Standard Reinigungs-Service</h1>
+                <p style="font-size: 1.3rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Präzision aus den USA, Fleiß aus Rumänien, Qualität aus Deutschland.</p>
+                <a href="kontakt.html" class="btn btn-yellow">Kostenloses Angebot</a>
+            </div>
+        </header>
+
+        <section class="container" style="padding: 80px 20px;">
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-star" style="color: var(--yellow); font-size: 2rem;" aria-hidden="true"></i>
+                    <h3>10 Jahre US-Erfahrung</h3>
+                    <p>Adriana Sandu bringt erstklassige Reinigungsmethoden direkt aus Amerika nach Duisburg.</p>
+                </div>
+                <div class="card card-highlight">
+                    <i class="fas fa-home" style="color: var(--red); font-size: 2rem;" aria-hidden="true"></i>
+                    <h3>Piso wie neu</h3>
+                    <p>Wir räumen aus, reinigen tiefenrein und streichen Ihre Wohnung. Alles aus einer Hand.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-clock" style="color: var(--blue); font-size: 2rem;" aria-hidden="true"></i>
+                    <h3>24/7 Notdienst</h3>
+                    <p>Dringende Reinigung oder Malerarbeiten? Wir sind in Rheinhausen sofort einsatzbereit.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>LYAN Reinigung & Maler</h4>
+                    <p>Professionelle Reinigung und Malerarbeiten in Duisburg-Rheinhausen.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>
+                        DE: <a href="tel:+4915510152163">+49 155 1015 2163</a><br>
+                        US: <a href="tel:+14255248504">+1 425 524 8504</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    <a href="impressum.html">Impressum</a> | 
+                    <a href="datenschutz.html">Datenschutz</a>
+                </p>
+                <p>&copy; 2026 LYAN. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/4915510152163" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const isActive = navLinks.classList.contains('active');
+            
+            // Update button state
+            menuToggle.setAttribute('aria-expanded', isActive);
+            menuToggle.setAttribute('aria-label', isActive ? 'Menü schließen' : 'Menü öffnen');
+            menuToggle.textContent = isActive ? '✕' : '☰';
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Menü öffnen');
+                menuToggle.textContent = '☰';
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-content')) {
+                navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Menü öffnen');
+                menuToggle.textContent = '☰';
+            }
+        });
+    </script>
+</body>
+</html>
